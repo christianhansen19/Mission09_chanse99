@@ -35,6 +35,7 @@ namespace Mission09_chanse99
                options.UseSqlite(Configuration["ConnectionStrings:BookDBConnection"]);
            });
 
+            services.AddScoped<IBookstoreRepository, EFBookstoreRepository>();
 
         }
 
