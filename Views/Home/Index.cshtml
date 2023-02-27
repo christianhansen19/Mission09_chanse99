@@ -1,5 +1,23 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+}
+
+@model List<Book>
+
+<h1>The Online Bookstore</h1>
+
+@foreach (Book x in Model)
+{
+    <h3>@x.Title</h3>
+
+    <ul>
+        <li>Author Name: @x.Author</li>
+        <li>Publisher: @x.Publisher</li>
+        <li>ISBN: @x.Isbn</li>
+        <li>Classification: @x.Classification</li>
+        <li>Category: @x.Category</li>
+        <li>Page Count: @x.PageCount</li>
+        <li>Price: @x.Price</li>
+    </ul>
+
+    <br />
 }

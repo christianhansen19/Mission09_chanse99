@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Mission09_chanse99.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,18 @@ namespace Mission09_chanse99.Controllers
 {
     public class HomeController : Controller
     {
+        private BookstoreContext context { get; set; }
+
+        public HomeController (BookstoreContext temp)
+        {
+            context = temp;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var blah = context.Books.ToList();
+
+            return View(blah);
         }
     }
 }
