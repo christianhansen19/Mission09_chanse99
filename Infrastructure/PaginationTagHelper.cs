@@ -29,8 +29,15 @@ namespace Mission09_chanse99.Infrastructure
         public PageInfo PageBlah { get; set; }
         public string PageAction { get; set; }
 
+        public bool PageClassesEnabled { get; set; } = false;
+        public string PageClass { get; set; }
+        public string PageClassNormal { get; set; }
+        public string PageClassSelected { get; set; }
+
         public override void Process(TagHelperContext thc, TagHelperOutput tho)
         {
+            
+
             IUrlHelper uh = uhf.GetUrlHelper(vc);
 
             TagBuilder final = new TagBuilder("div");
@@ -44,6 +51,13 @@ namespace Mission09_chanse99.Infrastructure
                 tb.InnerHtml.Append(i.ToString());
 
                 final.InnerHtml.AppendHtml(tb);
+
+                if (PageClassesEnabled)
+                {
+                    tb.AddCssClass(PageClass);
+                    tb.AddCssClass(i == PageBlah.CurrentPage
+                    ? PageClassSelected : PageClassNormal);
+                }
             }
 
             tho.Content.AppendHtml(final.InnerHtml);
