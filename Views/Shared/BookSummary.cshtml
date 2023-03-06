@@ -1,10 +1,17 @@
 ﻿@model Book
 
 
-<h3>@Model.Title</h3>
+
 
 <div class="card card-outline-primary m-1 p-1">
-    <div class="bg-faded p-1">
+    <div class="bg-light p-1">
+        <h3>@Model.Title</h3>
+
+        <span class="badge badge-pill badge-primary bg-info" style="float:right">
+            <small>Price: $@Model.Price</small>
+        </span>
+    </div>
+
         <ul class="card-text p-1" style="list-style:none">
             <li>Author Name: @Model.Author</li>
             <li>Publisher: @Model.Publisher</li>
@@ -14,11 +21,9 @@
             <li>Page Count: @Model.PageCount</li>
         </ul>
 
-        <span class="badge badge-pill badge-primary bg-black" style="float:right">
-            <small>Price: $@Model.Price</small>
-        </span>
+        
 
         <br />
 
-    </div>
+    
 </div>

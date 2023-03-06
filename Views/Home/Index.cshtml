@@ -8,31 +8,8 @@
 
 @foreach (Book x in Model.Books)
 {
-    @*<h3>@x.Title</h3>
-
-        <div class="card card-outline-primary m-1 p-1">
-            <div class="bg-faded p-1">
-                <ul class="card-text p-1">
-                    <li>Author Name: @x.Author</li>
-                    <li>Publisher: @x.Publisher</li>
-                    <li>ISBN: @x.Isbn</li>
-                    <li>Classification: @x.Classification</li>
-                    <li>Category: @x.Category</li>
-                    <li>Page Count: @x.PageCount</li>
-                </ul>
-
-                <span class="badge badge-pill badge-primary bg-black" style="float:right">
-                    <small>Price: $@x.Price</small>
-                </span>
-
-                <br />
-
-            </div>
-        </div>*@
 
     <partial name="BookSummary" model="x" />
-
-
 
 }
 
@@ -40,23 +17,3 @@
      page-class="btn" page-class-normal="btn-outline-dark"
      page-class-selected="btn-primary" class="btn-group pull-right m-1"></div>
 
-
-@*@model ProductsListViewModel
-    @foreach (var p in Model.Products)
-    {
-        <div class="card card-outline-primary m-1 p-1">
-            <div class="bg-faded p-1">
-                <h4>
-                    @p.Name
-                    <span class="badge badge-pill badge-primary" style="float:right">
-                        <small>@p.Price.ToString("c")</small>
-                    </span>
-                </h4>
-            </div>
-            <div class="card-text p-1">@p.Description</div>
-        </div>
-    }
-    <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
-         page-class="btn" page-class-normal="btn-outline-dark"
-         page-class-selected="btn-primary" class="btn-group pull-right m-1">
-    </div>*@
