@@ -53,11 +53,25 @@ namespace Mission09_chanse99
 
             app.UseEndpoints(endpoints =>
             {
+                //Category and Page
+                endpoints.MapControllerRoute(
+                    name: "categoryPage",
+                    pattern: "{bookCategory}/Page{pageNum}",
+                    defaults: new { Controller = "Home", action = "Index" });
+
+                //Page
                 endpoints.MapControllerRoute(
                     name: "Paging",
                     pattern: "Page{pageNum}",
                     defaults: new { Controller = "Home", action = "Index" });
 
+                //Category
+                endpoints.MapControllerRoute(
+                    name: "category",
+                    pattern: "{bookCategory}",
+                    defaults: new { Controller = "Home", action = "Index", pageNum = 1 });
+
+                //Default
                 endpoints.MapDefaultControllerRoute();
             });
         }
