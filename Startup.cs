@@ -63,7 +63,7 @@ namespace Mission09_chanse99
                 endpoints.MapControllerRoute(
                     name: "Paging",
                     pattern: "Page{pageNum}",
-                    defaults: new { Controller = "Home", action = "Index" });
+                    defaults: new { Controller = "Home", action = "Index", pageNum = 1 });
 
                 //Category
                 endpoints.MapControllerRoute(
