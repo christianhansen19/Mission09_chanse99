@@ -6,14 +6,16 @@
     <link href="~/lib/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="bg-dark text-white p-2">
+    <div class="bg-dark text-white p-2" style="position:fixed; width:100%; top: 0; z-index: 9;">
         <span class="navbar-brand ml-2">The Online Bookstore</span>
     </div>
-    <div class="row m-1 p-1">
-        <div id="categories" class="col-3">
-            <vc:category></vc:category>
+    <div class="row m-1 p-1" style="padding-top: 50px;">
+        <div id="categories" class="col-3" style="padding-top: 50px;">
+            <div id="categories" class="col-3" style="position:fixed;">
+                <vc:category></vc:category>
+            </div>
         </div>
-        <div class="col-9">
+        <div class="col-9" style="padding-top: 50px; padding-left: 2%">
             @RenderBody()
         </div>
     </div>

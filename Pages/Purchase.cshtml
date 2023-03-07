@@ -1,9 +1,10 @@
 ﻿@page
 @model Mission09_chanse99.Pages.PurchaseModel
 @{
+    ViewData["Title"] = "Your Cart";
 }
 
-<h2>Your cart</h2>
+<h2>Your Cart</h2>
 
 <table class="table table-bordered table-striped">
     <thead>
@@ -21,8 +22,8 @@
                 <tr>
                     <td>@i.Book.Title</td>
                     <td>@i.Quantity</td>
-                    <td>@i.Book.Price</td>
-                    <td>@(i.Quantity * i.Book.Price)</td>
+                    <td>@i.Book.Price.ToString("c")</td>
+                    <td>@((i.Quantity * i.Book.Price).ToString("c"))</td>
                 </tr>
             }
     </tbody>

@@ -8,7 +8,7 @@
         <h3>@Model.Title</h3>
 
         <span class="badge badge-pill badge-primary bg-info" style="float:right">
-            <small>Price: $@Model.Price</small>
+            <small>Price: @Model.Price.ToString("c")</small>
         </span>
     </div>
 
@@ -25,7 +25,7 @@
         <input type="hidden" asp-for="@Model.BookId" />
         <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathandQuery()"/>
         <span class="card-text">
-            <button type="submit" class="btn btn-success btn-sm float-end">Purchase</button>
+            <button type="submit" class="btn btn-success btn-sm float-end">Add to Cart</button>
         </span>
 
     </form>

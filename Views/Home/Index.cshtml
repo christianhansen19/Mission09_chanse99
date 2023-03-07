@@ -4,8 +4,6 @@
 
 @model BooksViewModel
 
-<h1>The Online Bookstore</h1>
-
 @foreach (Book x in Model.Books)
 {
 
@@ -14,6 +12,6 @@
 }
 
 <div page-blah="@Model.PageInfo" page-action="Index" page-classes-enabled="true"
-     page-class="btn" page-class-normal="btn-outline-dark"
-     page-class-selected="btn-primary" class="btn-group pull-right m-1"></div>
+     page-class="btn" page-class-normal="btn-outline-dark bg-white text-black"
+     page-class-selected="btn-primary" class="btn-group pull-right m-1" style="position: fixed; bottom: 0;"></div>
 
