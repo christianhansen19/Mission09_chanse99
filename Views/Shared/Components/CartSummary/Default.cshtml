@@ -10,13 +10,13 @@
             @Model.CalculateTotal().ToString("c")
         </small>
     }
-            else
-            {
-                <small  class="navbar-text">Cart is Empty</small>
-            }
-    @*<a class="btn btn-sm btn-secondary navbar-btn" asp-page="/Purchase"
-        asp-route-returnurl="@ViewContext.HttpContext.Request.PathAndQuery()">*@
-    <i class="fa-solid fa-cart-shopping"></i>
-    @*</a>*@
+    else
+    {
+        <small class="navbar-text">Cart is Empty</small>
+    }
+    <a class="btn btn-sm btn-secondary navbar-btn" asp-page="/Purchase"
+       asp-route-returnurl="@ViewContext.HttpContext.Request.PathandQuery()">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </a>
 
 </div>
