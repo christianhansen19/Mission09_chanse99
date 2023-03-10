@@ -4,15 +4,12 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="bg-dark text-white p-2" style="position:fixed; width:100%; top: 0; z-index: 9;">
-        <span class="navbar-brand ml-2">The Online Bookstore</span>
-        <span class="float-end">
-            @*INSERT CART ICON
-            ___ Items
-            Total: ___*@
-        </span>
+        <span class="navbar-brand ml-2">ONLINE BOOKSTORE</span>
+        <span class="float-end"><vc:cart-summary /></span>
     </div>
     <div class="row m-1 p-1" style="padding-top: 50px;">
         <div id="categories" class="col-3" style="padding-top: 50px;">
